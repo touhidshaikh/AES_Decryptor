@@ -1,22 +1,46 @@
-# AES_Decryptor
-This tool help you to decryption of AES Encrypted file in very easy way.
+# AES Decryptor
 
-                 
-visit : http://www.touhidshaikh.com Author :  @touhidshaikh22  
+AES Decryptor is a tool to decrypt encrypted files using OpenSSL.
 
-usage: aes_bruteforce_decryptor.py [-h] -i INFILE -w WORDLIST -o OFILENAME -m MODE                                                    
-This is AES decryptor for Encrypted files. For Decryption, System required openssl utils in you system.                                                                                                       
+## Requirements
+
+- openssl utils
+- Python3
+
+## Usage
+Usage: 
+```python
+python3 aes_decryptor.py [-h] --infile INFILE --wordlist WORDLIST --ofilename OFILENAME --mode MODE
+```
+
+### Options
+```bash
+-h, --help show this help message and exit
+-i INFILE, --infile INFILE
+Full path of Encrypted File.
+-w WORDLIST, --wordlist WORDLIST
+Full path of Wordlist File
+-o OFILENAME, --ofilename OFILENAME
+Output file name.
+-m MODE, --mode MODE Select any from aes-256-cbc or aes-256-ecb
+```
+
+## Example
+```bash
+python3 aes_decryptor.py -i encrypted.file -w wordlist.txt -o decrypted.file -m aes-256-cbc
+```
 
 
-optional arguments:                                                                                                                 
--h, --help            show this help message and exit
- 
- required named arguments:                                                                                                          
--i INFILE, --infile INFILE       Full path of Encrypted File.                                                                         
--w WORDLIST, --wordlist WORDLIST    Full path of Wordlist File                                                                      
--o OFILENAME, --ofilename OFILENAME   Output file name.                                                                               
--m MODE, --mode MODE  Select any from aes-256-cbc or aes-256-ecb                                                                                      
+## Contributing
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
-#Example :                                                                                                                            
-python aes_bruteforce_decryptor.py -i to_enc.txt.enc -w pass1.lst -o outputfile.txt -m aes-256-cbc
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+visit : http://www.touhidshaikh.com Author :  @touhidshaikh22
